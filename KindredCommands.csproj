@@ -1,34 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<AssemblyName>KindredCommands</AssemblyName>
-		<Description>Commands to expand Administration efforts and provide information</Description>
-		<Version>2.3.0</Version>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<LangVersion>latest</LangVersion>
-		<RootNamespace>KindredCommands</RootNamespace>
-		<Authors>odjit</Authors>
-		<BepInExPluginGuid>aa.odjit.KindredCommands</BepInExPluginGuid>
-		<BaseOutputPath></BaseOutputPath>
-	</PropertyGroup>
-	<ItemGroup>
-	  <None Remove="Commands\NewFile1.txt" />
-	  <None Remove="Data\English.json" />
-	  <None Remove="Data\PrefabNames.json" />
-	  <None Remove="LICENSE.txt" />
-	  <None Remove="NewFile1.txt" />
-	</ItemGroup>
-	<ItemGroup>
-	  <EmbeddedResource Include="Data\English.json" />
-	  <EmbeddedResource Include="Data\PrefabNames.json" />
-	  <EmbeddedResource Include="LICENSE.txt" />
-	</ItemGroup>
-	<ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>KindredCommands</AssemblyName>
+    <Description>Commands to expand Administration efforts and provide information</Description>
+    <Version>2.3.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>KindredCommands</RootNamespace>
+    <Authors>odjit</Authors>
+    <BepInExPluginGuid>aa.odjit.KindredCommands</BepInExPluginGuid>
+    <BaseOutputPath></BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Commands\NewFile1.txt" />
+    <None Remove="Data\English.json" />
+    <None Remove="Data\PrefabNames.json" />
+    <None Remove="LICENSE.txt" />
+    <None Remove="NewFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\English.json" />
+    <EmbeddedResource Include="Data\PrefabNames.json" />
+    <EmbeddedResource Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.691" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.Core" Version="6.0.0-be.691" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="VRising.VampireCommandFramework" Version="0.9.*" />
-	</ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="6.0.1" />
   </ItemGroup>
@@ -197,8 +197,7 @@
   <PropertyGroup>
     <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">		
-	  <Exec Command="copy &quot;$(TargetPath)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\VRising\BepInEx\plugins&quot; " ContinueOnError="true" />
-	  <Exec Command="copy &quot;$(TargetPath)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\VRisingDedicatedServer\BepInEx\plugins&quot; " ContinueOnError="true" />
-	</Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(TargetPath)&quot; &quot;D:\Program Files (x86)\Steam\steamapps\common\VRisingDedicatedServer\BepInEx\plugins&quot; " ContinueOnError="true" />
+  </Target>
 </Project>
